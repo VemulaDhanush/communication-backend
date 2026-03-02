@@ -28,7 +28,7 @@ app.post("/api/analyze", async (req, res) => {
 
     // 1. Flask AI server call
     // Flask server (Port 5000) run avtundo ledo check chesko
-    const response = await axios.post("http://127.0.0.1:5000/analyze", { text });
+    const response = await axios.post("https://communication-ai.onrender.com/analyze", { text });
 
     // 2. Score mapping
     // Flask nundi 'score' ane direct key rakapothe crash avtundi
@@ -142,3 +142,4 @@ app.post("/api/login", async (req, res) => {
 app.listen(5001, () => {
   console.log("Node server running on http://localhost:5001");
 });
+
